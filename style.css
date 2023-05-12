@@ -1,0 +1,264 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Space Grotesk", sans-serif;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  background: url(./img/background.svg) no-repeat center center;
+  background-size: cover;
+  height: 100dvh;
+  position: relative;
+}
+.wrapper .cal {
+  width: 26rem;
+  height: 80%;
+  background: #fafafa;
+  position: relative;
+  top: 55%;
+  left: 44%;
+  transform: translate(-50%, -50%);
+  border-radius: 3em;
+  box-shadow: #c9646a 0.4rem 0.4rem 0.4rem 0.1rem;
+}
+.wrapper .cal .resultScreen {
+  background-color: #ef9e9e;
+  height: 25%;
+  width: 100%;
+  border-radius: 3em 3em 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.wrapper .cal .resultScreen .keys__layout {
+  width: 60%;
+  margin-right: 2rem;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.wrapper .cal .resultScreen .keys__layout h3 {
+  font-weight: 400;
+  color: #fafafa;
+}
+.wrapper .cal .resultScreen .keys__layout h2 {
+  font-size: 4rem;
+  color: #383838;
+}
+.wrapper .cal .keys {
+  width: 100%;
+  height: 70%;
+}
+.wrapper .cal .keys .keys__layout {
+  width: 90%;
+  height: 100%;
+  margin: 2rem;
+  display: grid;
+  gap: 2rem;
+  grid-template-areas: "c d di m" "seven eight nine addi" "four five six subs" "one two three equal" "dott zeroo zeroo equal";
+}
+.wrapper .cal .keys .keys__layout .clear {
+  height: 90%;
+  width: 80%;
+  box-shadow: rgba(176, 172, 172, 0.64) 3px 2px 4px 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.3rem;
+  grid-area: c;
+}
+.wrapper .cal .keys .keys__layout .delete {
+  height: 90%;
+  width: 80%;
+  box-shadow: rgba(176, 172, 172, 0.64) 3px 2px 4px 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.3rem;
+  grid-area: d;
+}
+.wrapper .cal .keys .keys__layout .divide {
+  height: 90%;
+  width: 80%;
+  box-shadow: rgba(176, 172, 172, 0.64) 3px 2px 4px 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.3rem;
+  grid-area: di;
+}
+.wrapper .cal .keys .keys__layout .mul {
+  height: 90%;
+  width: 80%;
+  box-shadow: rgba(176, 172, 172, 0.64) 3px 2px 4px 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.3rem;
+  grid-area: m;
+}
+.wrapper .cal .keys .keys__layout .seven {
+  height: 90%;
+  width: 80%;
+  box-shadow: rgba(176, 172, 172, 0.64) 3px 2px 4px 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.3rem;
+  grid-area: seven;
+}
+.wrapper .cal .keys .keys__layout .eight {
+  height: 90%;
+  width: 80%;
+  box-shadow: rgba(176, 172, 172, 0.64) 3px 2px 4px 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.3rem;
+  grid-area: eight;
+}
+.wrapper .cal .keys .keys__layout .nine {
+  height: 90%;
+  width: 80%;
+  box-shadow: rgba(176, 172, 172, 0.64) 3px 2px 4px 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.3rem;
+  grid-area: nine;
+}
+.wrapper .cal .keys .keys__layout .add {
+  height: 90%;
+  width: 80%;
+  box-shadow: rgba(176, 172, 172, 0.64) 3px 2px 4px 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.3rem;
+  grid-area: addi;
+}
+.wrapper .cal .keys .keys__layout .four {
+  height: 90%;
+  width: 80%;
+  box-shadow: rgba(176, 172, 172, 0.64) 3px 2px 4px 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.3rem;
+  grid-area: four;
+}
+.wrapper .cal .keys .keys__layout .five {
+  height: 90%;
+  width: 80%;
+  box-shadow: rgba(176, 172, 172, 0.64) 3px 2px 4px 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.3rem;
+  grid-area: five;
+}
+.wrapper .cal .keys .keys__layout .six {
+  height: 90%;
+  width: 80%;
+  box-shadow: rgba(176, 172, 172, 0.64) 3px 2px 4px 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.3rem;
+  grid-area: six;
+}
+.wrapper .cal .keys .keys__layout .sub {
+  height: 90%;
+  width: 80%;
+  box-shadow: rgba(176, 172, 172, 0.64) 3px 2px 4px 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.3rem;
+  grid-area: subs;
+}
+.wrapper .cal .keys .keys__layout .one {
+  height: 90%;
+  width: 80%;
+  box-shadow: rgba(176, 172, 172, 0.64) 3px 2px 4px 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.3rem;
+  grid-area: one;
+}
+.wrapper .cal .keys .keys__layout .two {
+  height: 90%;
+  width: 80%;
+  box-shadow: rgba(176, 172, 172, 0.64) 3px 2px 4px 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.3rem;
+  grid-area: two;
+}
+.wrapper .cal .keys .keys__layout .three {
+  height: 90%;
+  width: 80%;
+  box-shadow: rgba(176, 172, 172, 0.64) 3px 2px 4px 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.3rem;
+  grid-area: three;
+}
+.wrapper .cal .keys .keys__layout .equal {
+  height: 90%;
+  width: 80%;
+  box-shadow: rgba(176, 172, 172, 0.64) 3px 2px 4px 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.3rem;
+  grid-area: equal;
+  height: 90%;
+  width: 80%;
+  box-shadow: rgba(176, 172, 172, 0.64) 3px 2px 4px 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.3rem;
+  padding: 0.1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper .cal .keys .keys__layout .dot {
+  height: 90%;
+  width: 80%;
+  box-shadow: rgba(176, 172, 172, 0.64) 3px 2px 4px 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.3rem;
+  grid-area: dott;
+}
+.wrapper .cal .keys .keys__layout .zero {
+  height: 90%;
+  width: 80%;
+  box-shadow: rgba(176, 172, 172, 0.64) 3px 2px 4px 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.3rem;
+  grid-area: zeroo;
+  height: 90%;
+  width: 80%;
+  box-shadow: rgba(176, 172, 172, 0.64) 3px 2px 4px 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.3rem;
+}/*# sourceMappingURL=style.css.map */

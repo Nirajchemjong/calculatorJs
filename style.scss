@@ -1,0 +1,210 @@
+@import "./mixins";
+// @use './mixin';
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+//colors 
+
+$primary-color: #ef9e9e;
+$dark-primary-color: #c9646a;
+$light-primary-color: #d06c64;
+$color-black: #383838;
+$color-white: #fafafa;
+
+
+//font 
+body {
+    font-family: 'Space Grotesk', sans-serif;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    background: url(./img/background.svg) no-repeat center center;
+    background-size: cover;
+    // background-clip: border-box;
+    // background-size: cover;
+    // max-width: 100%;
+    height: 100dvh;
+    position: relative;
+
+    //styling calculator screen 
+    .cal {
+        width: 26rem;
+        height: 80%;
+        // margin: auto;
+        background: $color-white;
+        position: relative;
+        top: 55%;
+        left: 44%;
+        transform: translate(-50%, -50%);
+        border-radius: 3em;
+        box-shadow: $dark-primary-color .4rem .4rem .4rem .1rem;
+        // padding: 2rem;
+
+        .resultScreen {
+            background-color: $primary-color;
+            height: 25%;
+            width: 100%;
+            border-radius: 3em 3em 0 0;
+            // padding-right: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: flex-end;
+            // gap: 1em;
+            // padding: 3rem;
+
+            .keys__layout {
+                width: 60%;
+                margin-right: 2rem;
+                margin-bottom: 2rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                align-items: flex-end;
+
+                h3 {
+                    font-weight: 400;
+                    color: #fafafa;
+                }
+
+                h2 {
+                    font-size: 4rem;
+                    color: $color-black;
+                }
+            }
+
+
+
+
+        }
+
+
+        .keys {
+            width: 100%;
+            height: 70%;
+
+            .keys__layout {
+                width: 90%;
+                height: 100%;
+                margin: 2rem;
+                display: grid;
+                gap: 2rem;
+
+                grid-template-areas: "c d di m"
+                    "seven eight nine addi"
+                    "four five six subs"
+                    "one two three equal"
+                    "dott zeroo zeroo equal";
+
+                .clear {
+                    @include box;
+                    grid-area: c;
+                }
+
+                .delete {
+                    @include box;
+                    grid-area: d;
+                }
+
+                .divide {
+                    @include box;
+                    grid-area: di;
+                }
+
+                .mul {
+                    @include box;
+                    grid-area: m;
+                }
+
+                .seven {
+                    @include box;
+                    grid-area: seven;
+                }
+
+                .eight {
+                    @include box;
+                    grid-area: eight;
+                }
+
+                .nine {
+                    @include box;
+                    grid-area: nine;
+                }
+
+                .add {
+                    @include box;
+                    grid-area: addi;
+                }
+
+                .four {
+                    @include box;
+                    grid-area: four;
+                }
+
+                .five {
+                    @include box;
+                    grid-area: five;
+                }
+
+                .six {
+                    @include box;
+                    grid-area: six;
+                }
+
+                .sub {
+                    @include box;
+                    grid-area: subs;
+                }
+
+                .one {
+                    @include box;
+                    grid-area: one;
+                }
+
+                .two {
+                    @include box;
+                    grid-area: two;
+                }
+
+                .three {
+                    @include box;
+                    grid-area: three;
+
+                }
+
+                .equal {
+                    @include box;
+                    grid-area: equal;
+                    @include box;
+                    padding: .1rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                }
+
+                .dot {
+                    @include box;
+                    grid-area: dott;
+
+                }
+
+                .zero {
+                    @include box;
+                    grid-area: zeroo;
+                    @include box;
+
+
+                }
+            }
+
+
+
+        }
+
+    }
+}

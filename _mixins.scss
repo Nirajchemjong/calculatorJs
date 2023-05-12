@@ -1,0 +1,14 @@
+@mixin flex($content, $content1) {
+    display: flex;
+    justify-content: $content;
+    align-items: $content1;
+}
+
+@mixin box {
+    height: 90%;
+    width: 80%;
+    box-shadow: rgba(176, 172, 172, 0.64) 3px 2px 4px 1px;
+
+    @include flex(center, center);
+    border-radius: .3rem;
+}
